@@ -827,6 +827,82 @@ section {
 }
 
 /* ==========================================
+   Testimonials Section
+   ========================================== */
+.testimonials {
+  padding: 5rem 0;
+  background-color: var(--color-cream);
+}
+
+.testimonials__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.testimonial-card {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+}
+
+.testimonial-card__quote-icon {
+  font-size: 1.5rem;
+  color: var(--color-gold);
+  opacity: 0.4;
+  margin-bottom: 0.75rem;
+}
+
+.testimonial-card__stars {
+  display: flex;
+  gap: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+.testimonial-card__stars i {
+  color: var(--color-gold);
+  font-size: 0.9rem;
+}
+
+.testimonial-card__text {
+  color: var(--color-text);
+  line-height: 1.8;
+  font-size: 0.95rem;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-card__author {
+  border-top: 1px solid rgba(0,0,0,0.06);
+  padding-top: 1rem;
+}
+
+.testimonial-card__name {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-dark);
+  font-size: 1rem;
+}
+
+.testimonial-card__role {
+  color: var(--color-text-light);
+  font-size: 0.85rem;
+  margin-top: 0.15rem;
+}
+
+/* ==========================================
+   Testimonials Section - Tablet
+   ========================================== */
+@media (min-width: 768px) {
+  .testimonials__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+/* ==========================================
    Footer Section
    ========================================== */
 .footer {
