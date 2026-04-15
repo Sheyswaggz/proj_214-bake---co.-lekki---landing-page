@@ -159,6 +159,57 @@ section {
 }
 
 /* ==========================================
+   Button Styles
+   ========================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition-base);
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background-color: var(--color-brown);
+  color: var(--color-white);
+  border-color: var(--color-brown);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-brown-light);
+  border-color: var(--color-brown-light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-brown);
+  border-color: var(--color-brown);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-brown);
+  color: var(--color-white);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
+
+/* ==========================================
    Responsive Media Queries
    ========================================== */
 
@@ -655,5 +706,122 @@ section {
 @media (min-width: 1024px) {
   .about__content {
     gap: 4rem;
+  }
+}
+
+/* ==========================================
+   Contact and Location Section
+   ========================================== */
+.contact {
+  padding: 5rem 0;
+  background-color: var(--color-white);
+}
+
+.contact__content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+
+.contact__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact__details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.contact__icon {
+  font-size: 1.25rem;
+  color: var(--color-gold);
+  margin-top: 0.25rem;
+  width: 24px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.contact__item h3 {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--color-dark);
+  margin-bottom: 0.25rem;
+}
+
+.contact__item p {
+  color: var(--color-text-light);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.contact__item a {
+  color: var(--color-brown);
+  font-weight: 600;
+}
+
+.contact__item a:hover {
+  color: var(--color-gold);
+}
+
+.contact__cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.btn-whatsapp {
+  background-color: #25D366;
+  color: var(--color-white);
+  border: none;
+}
+
+.btn-whatsapp:hover {
+  background-color: #128C7E;
+  transform: scale(1.05);
+  box-shadow: var(--shadow-md);
+}
+
+.contact__map {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  min-height: 300px;
+}
+
+.contact__map iframe {
+  display: block;
+  width: 100%;
+  min-height: 300px;
+}
+
+/* ==========================================
+   Contact and Location Section - Tablet
+   ========================================== */
+@media (min-width: 768px) {
+  .contact__content {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+
+  .contact__map iframe {
+    min-height: 400px;
+  }
+}
+
+/* ==========================================
+   Contact and Location Section - Desktop
+   ========================================== */
+@media (min-width: 1024px) {
+  .contact__content {
+    gap: 3rem;
   }
 }
