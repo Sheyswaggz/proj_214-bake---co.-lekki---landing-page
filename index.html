@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bake & Co. in Lekki offers artisan breads, decadent cakes, and heavenly pastries. Freshly baked happiness in the heart of Lagos, Nigeria.">
+  <title>Bake & Co. | Freshly Baked Happiness in Lekki, Lagos</title>
+
+  <meta property="og:title" content="Bake & Co. | Freshly Baked Happiness in Lekki, Lagos">
+  <meta property="og:description" content="Artisan breads, decadent cakes, and heavenly pastries — crafted with love in Lagos, Nigeria">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=1200&h=630&fit=crop&q=80">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/animations.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav container">
+      <a href="#" class="nav__logo">
+        <span class="nav__logo-icon"><i class="fas fa-bread-slice"></i></span> Bake & Co.
+      </a>
+      <button class="nav__hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="nav__hamburger-line"></span>
+        <span class="nav__hamburger-line"></span>
+        <span class="nav__hamburger-line"></span>
+      </button>
+      <ul class="nav__menu">
+        <li><a href="#products" class="nav__link">Products</a></li>
+        <li><a href="#about" class="nav__link">About Us</a></li>
+        <li><a href="#contact" class="nav__link">Contact</a></li>
+        <li><a href="#contact" class="nav__link btn btn-primary nav__cta">Order Now</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="hero" class="hero">
+    <div class="hero__image-wrapper">
+      <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=1920&h=1080&fit=crop&q=80"
+           srcset="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=640&h=360&fit=crop&q=75 640w, https://images.unsplash.com/photo-1509440159596-0249088772ff?w=1024&h=576&fit=crop&q=80 1024w, https://images.unsplash.com/photo-1509440159596-0249088772ff?w=1920&h=1080&fit=crop&q=80 1920w"
+           sizes="100vw"
+           alt="Freshly baked artisan bread and pastries displayed on a rustic wooden table"
+           class="hero__image"
+           width="1920"
+           height="1080"
+           fetchpriority="high">
+    </div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content container">
+      <h1 class="hero__title">Bake & Co.</h1>
+      <p class="hero__tagline">Freshly Baked Happiness in the Heart of Lekki</p>
+      <p class="hero__subtitle">Artisan breads, decadent cakes, and heavenly pastries — crafted with love in Lagos, Nigeria</p>
+      <div class="hero__cta-group">
+        <a href="#contact" class="btn btn-primary btn-lg">Order Now <i class="fas fa-arrow-right"></i></a>
+        <a href="#contact" class="btn btn-secondary btn-lg hero__btn-secondary">Visit Us <i class="fas fa-map-marker-alt"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section id="products" class="products reveal">
+      <div class="container">
+        <h2>Our Baked Goods</h2>
+      </div>
+    </section>
+
+    <section id="about" class="about reveal">
+      <div class="container">
+        <h2>Our Story</h2>
+      </div>
+    </section>
+
+    <section id="contact" class="contact reveal">
+      <div class="container">
+        <h2>Find Us</h2>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer">
+    <div class="container">
+      <p>&copy; 2024 Bake & Co. Lekki</p>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js" defer></script>
+</body>
+</html>

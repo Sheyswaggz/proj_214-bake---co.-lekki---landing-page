@@ -215,3 +215,238 @@ section {
     font-size: 1.75rem;
   }
 }
+
+/* ==========================================
+   Header / Navigation Styles
+   ========================================== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(255, 248, 240, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-base);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.nav__logo {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-brown);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav__logo-icon {
+  color: var(--color-gold);
+}
+
+.nav__hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1001;
+}
+
+.nav__hamburger-line {
+  width: 25px;
+  height: 2px;
+  background-color: var(--color-brown);
+  transition: var(--transition-base);
+}
+
+.nav__hamburger.active .nav__hamburger-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.nav__hamburger.active .nav__hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.nav__hamburger.active .nav__hamburger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.nav__menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 70%;
+  max-width: 300px;
+  height: 100vh;
+  background-color: var(--color-cream);
+  padding: 5rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  list-style: none;
+  transition: right 0.3s ease;
+  box-shadow: var(--shadow-lg);
+}
+
+.nav__menu.active {
+  right: 0;
+}
+
+.nav__link {
+  font-weight: 600;
+  color: var(--color-text);
+  transition: var(--transition-base);
+  font-size: 1.1rem;
+}
+
+.nav__link:hover {
+  color: var(--color-gold);
+}
+
+.nav__cta {
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+}
+
+/* ==========================================
+   Hero Section Styles
+   ========================================== */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: 0;
+}
+
+.hero__image-wrapper {
+  position: absolute;
+  inset: 0;
+}
+
+.hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(44, 27, 14, 0.3) 0%, rgba(44, 27, 14, 0.55) 50%, rgba(255, 248, 240, 0.85) 100%);
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 6rem 1rem 3rem;
+}
+
+.hero__title {
+  font-size: 3rem;
+  color: var(--color-white);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  margin-bottom: 0.5rem;
+}
+
+.hero__tagline {
+  font-size: 1.25rem;
+  color: var(--color-white);
+  font-weight: 300;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  margin-bottom: 0.75rem;
+}
+
+.hero__subtitle {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 500px;
+  margin: 0 auto 2rem;
+}
+
+.hero__cta-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.btn-lg {
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+}
+
+.hero__btn-secondary {
+  border-color: var(--color-white);
+  color: var(--color-white);
+}
+
+.hero__btn-secondary:hover {
+  background-color: var(--color-white);
+  color: var(--color-brown);
+}
+
+/* ==========================================
+   Responsive Navigation and Hero - Tablet
+   ========================================== */
+@media (min-width: 768px) {
+  .nav__hamburger {
+    display: none;
+  }
+
+  .nav__menu {
+    position: static;
+    width: auto;
+    max-width: none;
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  .hero__title {
+    font-size: 4rem;
+  }
+
+  .hero__tagline {
+    font-size: 1.5rem;
+  }
+
+  .hero__cta-group {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+/* ==========================================
+   Responsive Navigation and Hero - Desktop
+   ========================================== */
+@media (min-width: 1024px) {
+  .hero__title {
+    font-size: 5rem;
+  }
+
+  .hero__tagline {
+    font-size: 1.75rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1.15rem;
+  }
+}
