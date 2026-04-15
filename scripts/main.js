@@ -70,16 +70,22 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // ==========================================
-  // SECTION 4 - MOBILE HAMBURGER MENU
+  // SECTION 4 - MOBILE HAMBURGER MENU WITH OVERLAY
   // ==========================================
   const hamburger = document.querySelector('.nav__hamburger');
   const navMenu = document.querySelector('.nav__menu');
 
   if (hamburger && navMenu) {
+    // Create overlay element dynamically
+    const overlay = document.createElement('div');
+    overlay.classList.add('nav__overlay');
+    document.body.appendChild(overlay);
+
     // Toggle menu on hamburger click
     hamburger.addEventListener('click', function() {
       hamburger.classList.toggle('active');
       navMenu.classList.toggle('active');
+      overlay.classList.toggle('active');
 
       const isExpanded = hamburger.classList.contains('active');
       hamburger.setAttribute('aria-expanded', isExpanded);
@@ -92,6 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
       link.addEventListener('click', function() {
         hamburger.classList.remove('active');
         navMenu.classList.remove('active');
+        overlay.classList.remove('active');
         hamburger.setAttribute('aria-expanded', 'false');
         document.body.style.overflow = '';
       });
@@ -102,9 +109,19 @@ document.addEventListener('DOMContentLoaded', function() {
       if (!navMenu.contains(e.target) && !hamburger.contains(e.target) && navMenu.classList.contains('active')) {
         hamburger.classList.remove('active');
         navMenu.classList.remove('active');
+        overlay.classList.remove('active');
         hamburger.setAttribute('aria-expanded', 'false');
         document.body.style.overflow = '';
       }
+    });
+
+    // Close menu when clicking overlay
+    overlay.addEventListener('click', function() {
+      hamburger.classList.remove('active');
+      navMenu.classList.remove('active');
+      overlay.classList.remove('active');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
     });
   }
 
