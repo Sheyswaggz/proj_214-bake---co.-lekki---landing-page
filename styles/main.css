@@ -68,6 +68,27 @@ body {
 }
 
 /* ==========================================
+   Skip Link - Accessibility
+   ========================================== */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-brown);
+  color: var(--color-white);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0 0 8px 8px;
+  z-index: 9999;
+  font-weight: 700;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* ==========================================
    Typography
    ========================================== */
 h1,
@@ -107,6 +128,15 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+  content-visibility: auto;
+}
+
+/* ==========================================
+   Text Selection
+   ========================================== */
+::selection {
+  background-color: var(--color-gold);
+  color: var(--color-dark);
 }
 
 /* ==========================================
@@ -348,10 +378,26 @@ section {
   list-style: none;
   transition: right 0.3s ease;
   box-shadow: var(--shadow-lg);
+  z-index: 1000;
 }
 
 .nav__menu.active {
   right: 0;
+}
+
+.nav__overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.nav__overlay.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 .nav__link {
@@ -469,6 +515,10 @@ section {
     padding: 0;
     box-shadow: none;
     background: transparent;
+  }
+
+  .nav__overlay {
+    display: none;
   }
 
   .hero__title {
