@@ -1,0 +1,217 @@
+/* ==========================================
+   Google Fonts Import
+   ========================================== */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap');
+
+/* ==========================================
+   CSS Custom Properties - Design System
+   ========================================== */
+:root {
+  /* Color Palette - Warm Bakery Theme */
+  --color-cream: #FFF8F0;
+  --color-brown: #5C3D2E;
+  --color-brown-light: #8B6F4E;
+  --color-gold: #C8A96E;
+  --color-gold-light: #D4B87A;
+  --color-white: #FFFFFF;
+  --color-dark: #2D1B0E;
+  --color-text: #3D2B1F;
+  --color-text-light: #6B5B4F;
+  --color-bg: #FFF8F0;
+  --color-overlay: rgba(44, 27, 14, 0.5);
+
+  /* Typography */
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Lato', 'Segoe UI', sans-serif;
+
+  /* Transitions */
+  --transition-base: all 0.3s ease;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.16);
+
+  /* Border Radius */
+  --border-radius: 12px;
+
+  /* Layout */
+  --max-width: 1200px;
+}
+
+/* ==========================================
+   CSS Reset
+   ========================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ==========================================
+   Base Styles
+   ========================================== */
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==========================================
+   Typography
+   ========================================== */
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  color: var(--color-dark);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 0.875rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+  margin-bottom: 0.625rem;
+}
+
+/* ==========================================
+   Images
+   ========================================== */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ==========================================
+   Links
+   ========================================== */
+a {
+  color: var(--color-brown);
+  text-decoration: none;
+  transition: var(--transition-base);
+}
+
+a:hover {
+  color: var(--color-gold);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--color-brown);
+  outline-offset: 2px;
+}
+
+/* ==========================================
+   Layout Components
+   ========================================== */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* ==========================================
+   Section Base Styles
+   ========================================== */
+section {
+  padding: 4rem 0;
+}
+
+/* ==========================================
+   Utility Classes
+   ========================================== */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* ==========================================
+   Responsive Media Queries
+   ========================================== */
+
+/* Tablet and up */
+@media (min-width: 768px) {
+  .container {
+    padding: 0 2rem;
+  }
+
+  section {
+    padding: 5rem 0;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 1.75rem;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Desktop and up */
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 2.5rem;
+  }
+
+  section {
+    padding: 6rem 0;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  h4 {
+    font-size: 1.75rem;
+  }
+}
