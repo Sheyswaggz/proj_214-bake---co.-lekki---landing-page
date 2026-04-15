@@ -556,3 +556,104 @@ section {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/* ==========================================
+   About Us Section
+   ========================================== */
+.about {
+  padding: 5rem 0;
+  background-color: var(--color-bg);
+}
+
+.about__content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.about__text p {
+  margin-bottom: 1rem;
+  line-height: 1.8;
+  color: var(--color-text);
+}
+
+.about__lead {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-dark);
+}
+
+.about__image-wrapper {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.about__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 300px;
+}
+
+.about__stats {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  text-align: center;
+  padding: 2.5rem;
+  background-color: var(--color-white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.about__stat {
+  padding: 1rem;
+}
+
+.about__stat-number {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-gold);
+  line-height: 1.2;
+}
+
+.about__stat-label {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  margin-top: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ==========================================
+   About Us Section - Tablet
+   ========================================== */
+@media (min-width: 768px) {
+  .about__content {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .about__stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .about__stat-number {
+    font-size: 3rem;
+  }
+}
+
+/* ==========================================
+   About Us Section - Desktop
+   ========================================== */
+@media (min-width: 1024px) {
+  .about__content {
+    gap: 4rem;
+  }
+}
