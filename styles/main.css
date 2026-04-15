@@ -825,3 +825,131 @@ section {
     gap: 3rem;
   }
 }
+
+/* ==========================================
+   Footer Section
+   ========================================== */
+.footer {
+  background-color: var(--color-dark);
+  color: var(--color-cream);
+  padding: 4rem 0 0;
+  margin-top: 0;
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(255, 248, 240, 0.15);
+}
+
+.footer__logo {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer__logo i {
+  color: var(--color-gold);
+}
+
+.footer__tagline {
+  color: rgba(255, 248, 240, 0.7);
+  line-height: 1.7;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer__social {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 248, 240, 0.1);
+  color: var(--color-cream);
+  font-size: 1.1rem;
+  transition: var(--transition-base);
+}
+
+.footer__social-link:hover {
+  background-color: var(--color-gold);
+  color: var(--color-dark);
+  transform: scale(1.1);
+}
+
+.footer__heading {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--color-white);
+  margin-bottom: 1rem;
+}
+
+.footer__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer__list li {
+  color: rgba(255, 248, 240, 0.7);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer__list a {
+  color: rgba(255, 248, 240, 0.7);
+  transition: var(--transition-base);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer__list a:hover {
+  color: var(--color-gold);
+}
+
+.footer__list i {
+  font-size: 0.85rem;
+  width: 16px;
+  color: var(--color-gold);
+}
+
+.footer__bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.5rem 0;
+  text-align: center;
+  font-size: 0.85rem;
+  color: rgba(255, 248, 240, 0.5);
+}
+
+/* ==========================================
+   Footer Section - Tablet
+   ========================================== */
+@media (min-width: 768px) {
+  .footer__grid {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+
+  .footer__bottom {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
